@@ -285,11 +285,11 @@
   }
 .container-wrapper{
   width: 100%;
-  background-image: url('');
+  background-image: url('./anh/back-02.png');
   background-position: bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-
+  z-index: 1;
 }
 
 #home{
@@ -782,7 +782,7 @@ div.hamburger-box.active .bottom {
 	}
 	.menu {
 	  width: 200px;
-	  background-color: #ffffcc;
+	  background-color: #fff;
 	  position: absolute;
 	  top: 0;
     right: -200px;
@@ -836,7 +836,7 @@ div.hamburger-box.active .bottom {
     color: #111;
 	}
 	.menu ul{
-		/* background: #ffffcc; */
+		/* background: #fff; */
 		padding:0px;
 	}
 	.hamburger-box span{
@@ -845,7 +845,7 @@ div.hamburger-box.active .bottom {
 	}
 	.hamburger-box.active {
 		top:0;
-		background: #ffffcc;
+		background: #fff;
 	}
 	.hamburger-box.active .bun{
 		background: #111;

@@ -1,66 +1,161 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grid Layout</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Thông tin Open Graph cho ảnh đại diện -->
+  <!-- <meta property="og:image" content="https://yenstudio.com.vn/tri-thao.jpg" /> -->
+  <meta property="og:image:width" content="600" /> <!-- Chiều rộng ảnh đại diện -->
+  <meta property="og:image:height" content="300" /> <!-- Chiều cao ảnh đại diện -->
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 cột đều cho tất cả các row */
-      grid-template-rows: auto; /* Các hàng tự động điều chỉnh kích thước */
-      gap: 10px;
-      margin: 20px;
-    }
-
-    .grid-item {
-      padding: 20px;
-      text-align: center;
-      font-size: 16px;
-      color: white;
-      border-radius: 8px;
-    }
-
-    /* Màu sắc cho các row */
-    .row-1 {
-      background-color: #FF6347; /* Màu đỏ cam */
-    }
-
-    .row-2 {
-      background-color: #4682B4; /* Màu xanh dương */
-      grid-column: span 2; /* Row giữa chỉ có 2 cột */
-    }
-
-    .row-3 {
-      background-color: #32CD32; /* Màu xanh lá */
-    }
-
-    /* Các phần tử trong từng cột */
-    .grid-container > div {
-      background-color: #FFD700; /* Màu vàng */
-    }
-  </style>
+  <!-- Các thông tin khác cho Open Graph -->
+  <meta property="og:title" content="VY - JOSH" />
+  <meta property="og:description" content="VY - JOSH" />
+  <!-- <meta property="og:url" content="https://yenstudio.com.vn/tri-thao/thiepmoi.html" /> -->
+  <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./thiep/box.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="./thiep/jquery.fancybox.min.css" rel="stylesheet" />
+    <script src="./thiep/jquery.fancybox.min.js"></script>
+    <title>VY - JOSH</title>
 </head>
+
 <body>
+  <div class="container">
+    <div class="container-wrapper">
+      <div class="box-circle">
+        <div class="circle" id="musicCircle">
+            <img src="./thiep/anh/cd.png" alt="Music Icon" class="circle-image">
+            <audio id="audio" src="./thiep/audio/Taylor Swift - The Way I Loved You (Taylor's Version) (Lyric Video).mp3" loop></audio>
+        </div>
+        <label for="audio" class="lb-circle">No Music? <br> Click Me</label>
+      </div>
 
-  <div class="grid-container">
-    <div class="grid-item row-1">Cột 1, Hàng 1</div>
-    <div class="grid-item row-1">Cột 2, Hàng 1</div>
-    <div class="grid-item row-1">Cột 3, Hàng 1</div>
+      <div class="super-container">
+        <div class="slide-container">
+          <div class="stripe toggle-nav js-nav">
+            <div class="hamburger-box">
+              <div class="bun top"></div>
+              <div class="meat"></div>
+              <div class="bun bottom"></div>
+            </div>
+          </div>
+          <div class="nav-wrap">
+            <nav class="menu">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#wedding-details">Wedding Details</a></li>                        </li>
+                <li><a href="#reception">Reception</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    <div id="home">
+          <div class="name">
+              <label for="" class="lb-top">THE WEDDING OF</label>
+              <img src="./thiep/anh/1-02.png" alt="" class="img-top">
+              <lb class="lb-name">Vy & Josh</lb>
+              <lb class="lb-time">16.03.2025</lb>
+          </div>
+          <div class="time">
+            <label for="" class="lb-save">save out date</label>
+            <div class="box-grid">
+                <div class="grid-column">
+                    <img src="./thiep/anh/icon1-02.png" alt="" class="zoom-in img-clm1">
+                    <img src="./thiep/anh/icon2-02.png" alt="" class="zoom-in img-clm2">
+                </div>
+                <div class="grid-column">
+                    <img src="./thiep/anh/icon3-02.png" alt="" class="zoom-in img-clm3">
+                </div>
+                <div class="grid-column">
+                    <img src="./thiep/anh/icon4-02.png" alt="" class="zoom-in img-clm4">
+                    <img src="./thiep/anh/icon5-02.png" alt="" class="zoom-in img-clm5">
+                </div>
+            </div>
+            <label for="" class="lb-time2">16.03.2025</label>
+            <label for="" class="lb-time3">at 11:00 in the afternoon</label>
+        </div>
+   </div>
 
-    <div class="grid-item row-2">Cột 1, Hàng 2</div>
-    <div class="grid-item row-2">Cột 2, Hàng 2</div>
+    </div>
+  </div>    
 
-    <div class="grid-item row-3">Cột 1, Hàng 3</div>
-    <div class="grid-item row-3">Cột 2, Hàng 3</div>
-    <div class="grid-item row-3">Cột 3, Hàng 3</div>
-  </div>
 
+
+
+  <script>
+    var burger = $(".hamburger-box");
+
+burger.on("click", function (e) {
+  $(this).toggleClass("active");
+  $('.js-nav').parent().find('.menu').toggleClass('active');
+});
+
+// Khi nhấn vào bất kỳ liên kết nào trong menu, menu sẽ đóng lại
+$('.menu a').on("click", function () {
+  $('.hamburger-box').removeClass("active"); // Xóa class active từ burger
+  $('.js-nav').parent().find('.menu').removeClass('active'); // Đóng menu
+});
+
+</script>
+           <script>
+            window.onload = function() {
+          // Lấy tất cả các phần tử cho các hiệu ứng fade-down, fade-up, fade-right, fade-left, zoom-in
+          const fadeDownElements = document.querySelectorAll('.lb4, .lb44, .img-timeline, .img-dress, .til1');  // Các phần tử fade-down
+          const fadeUpElements = document.querySelectorAll('.img-told1, .img-rec1, .btn');    // Các phần tử fade-up
+          const fadeRightElements = document.querySelectorAll('.lb3, .story1');                               // Các phần tử fade-right
+          const fadeLeftElements = document.querySelectorAll('.lb3, .story2');                                // Các phần tử fade-left
+          const zoomInElements = document.querySelectorAll('.img-clm1, .img-clm2, .img-clm3, .img-clm4, .img-clm5, .img-rec2');                // Các phần tử zoom-in
+      
+          // Cấu hình của IntersectionObserver
+          const options = {
+              root: null, // Theo mặc định là viewport
+              threshold: 0.5 // Kích hoạt khi 50% phần tử hiển thị trong viewport
+          };
+      
+          // Tạo đối tượng IntersectionObserver để theo dõi sự xuất hiện và mất đi của phần tử
+          const observer = new IntersectionObserver((entries, observer) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      // Nếu phần tử xuất hiện trong viewport, thêm lớp "visible"
+                      entry.target.classList.add('visible');
+                  } else {
+                      // Nếu phần tử không còn trong viewport, xóa lớp "visible"
+                      entry.target.classList.remove('visible');
+                  }
+              });
+          }, options);
+      
+          // Quan sát các phần tử theo từng hiệu ứng
+          fadeDownElements.forEach(element => observer.observe(element));
+          fadeUpElements.forEach(element => observer.observe(element));
+          fadeRightElements.forEach(element => observer.observe(element));
+          fadeLeftElements.forEach(element => observer.observe(element));
+          zoomInElements.forEach(element => observer.observe(element));
+      };
+</script>       
+    <script>
+        const musicCircle = document.getElementById("musicCircle");
+        const audio = document.getElementById("audio");
+
+        // Thêm sự kiện khi nhấn vào hình tròn
+        musicCircle.addEventListener("click", function () {
+            // Nếu nhạc đang dừng và hình tròn không xoay
+            if (audio.paused) {
+                audio.play(); // Phát nhạc
+                musicCircle.classList.add("spin"); // Bắt đầu xoay liên tục
+            } else {
+                audio.pause(); // Dừng nhạc nếu đang phát
+                musicCircle.classList.remove("spin"); // Dừng xoay
+            }
+        });
+    </script>
+    <script src="./thiep/thiep.js"></script>
 </body>
+
 </html>
