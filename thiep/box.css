@@ -478,7 +478,7 @@
   margin-bottom: 20px;
 }
 
-.button {
+.btn {
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -573,13 +573,13 @@ hr{
 }
 
 /* Hiệu ứng fade-up */
-.img-told1, .img-rec1, .button {
+.img-told1, .img-rec1, .btn {
   transform: translateY(20px);
   opacity: 0;
   transition: transform 1s, opacity 1s;
 }
 
-.img-told1.visible, .img-rec1.visible, .button.visible {
+.img-told1.visible, .img-rec1.visible, .btn.visible {
   transform: translateY(0);
   opacity: 1;
 }
